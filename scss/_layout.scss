@@ -1,0 +1,213 @@
+body{
+    background: $secondary;
+    line-height: 1.4;
+}
+.container {
+    max-width: 1024px;
+    margin:0 auto;
+    @include w-md{
+        max-width: 768px;
+    }
+    @include w-sm{
+        max-width: 320px;
+        padding:12px;
+    }
+}
+.navber{
+    width: 100%;
+    background:rgba(0,0,0,0.75);
+    z-index: 100;
+    position: fixed;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0px;
+    }
+    h1 a{
+        @include replace-text;
+        display: block;
+        background:url('../images/logo_w@svg.svg') no-repeat;
+        width: 120px;
+        height: 24px;
+        margin:0 0 0 16px;
+    }
+    @include w-sm{
+        h1{
+            padding:16px 0;
+        }
+    }
+}
+.showmenu{
+    display: none;
+    @include replace-text;
+    background:url('https://www.svgrepo.com/show/128328/menu.svg') no-repeat;
+    width: 34px;
+    height: 34px;
+    background-size: 70%;
+    background-position: center;
+    @include w-sm{
+        display:block;
+    }
+}
+.menu{
+    display: flex;
+    a{
+        position: relative;
+        color:white;
+        padding:20px;
+        display: block;
+        &::before{
+            content: '';
+            width: 0%;
+            border-bottom: 4px solid #a9a9a9;
+            position: absolute;
+            display: block;
+            left:0;
+            bottom:0;
+            transition: all .3s ease;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+    @include w-sm{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: 100;
+        top:56px;
+        left:0px;
+        right:0px;
+        flex-direction:column;
+        text-align: center;
+        background:rgba(0, 0, 0, 0.95);
+        transition: all .3s linear;
+    }
+}
+.menu-show{
+    height: 188px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('../images/header_desktop.png') no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 420px;
+    margin:0 0 50px 0;
+    &-content{
+        background:rgba(0,0,0,0.35);
+        padding:20px 32px 26px;
+        color:white;
+    }
+    h2{
+        font-size:$fz-xl;
+        margin:0 0 16px 0;
+    }
+    p{
+        text-align: center;
+    }
+    @include w-sm{
+        background: url('../images/header_mobile.png') no-repeat;
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+}
+.footer{
+    .container{
+        display: flex;
+        padding:50px 42px;
+        @include w-md{
+            flex-direction: column;
+            align-items: center;
+            padding:50px 12px;
+        }
+    }
+}
+.footer-content{
+    display: flex;
+    div{
+        width: 50%;
+        margin:0 20px 0 0;
+    }
+    h3{
+        font-size: $fz-l;
+        margin:0 0 16px 0;
+        color:$primary;
+    }
+    p{
+        color:$primary;
+    }
+    ul{
+        list-style: disc inside;
+    }
+    li{
+        color:$primary;
+    }
+    a{
+        color:$primary;
+        position: relative;
+        &::before{
+            content: '';
+            width: 0%;
+            border-bottom: 2px solid red;
+            position: absolute;
+            display: block;
+            left:0;
+            bottom:0;
+            transition: all .3s ease;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+    @include w-md{
+        display: block;
+        div{
+            width: 100%;
+            margin:0 0 30px 0;
+        }
+    }
+}
+.footer-link{
+    width: 33%;
+    h3{
+        @include replace-text;
+        width: 244px;
+        height: 49px;
+        background:url('../images/logo_l@svg.svg') no-repeat;
+        margin:0 0 22px 0;
+    }
+    ul {
+        display: flex;
+        font-size: $fz-xl;
+        justify-content: flex-end;
+    }
+    a{
+        margin:0 0 0 12px;
+    }
+    @include w-md{
+        width: 100%;
+        h3{
+            margin:0 0 0 auto;
+        }
+    }
+    @include w-sm{
+        ul{
+            margin:10px 0 0 0;
+        }
+    }
+}
+.google{
+    color:#db4437;
+}
+.twitter{
+    color:#41abe1;
+}
+.facebook{
+    color:#3a5795;
+}

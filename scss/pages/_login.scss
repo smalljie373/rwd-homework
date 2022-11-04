@@ -1,0 +1,196 @@
+.login-content{
+    color:$primary;
+    margin:0 0 16px 0;
+    h2{
+        font-size: $fz-xxl;
+        text-align: center;
+        font-weight: bold;
+        margin:0 0 30px 0;
+        span{
+            display: block;
+            font-size: $fz-m;
+        }
+    }
+    .form{
+        width: 21.35%;
+        margin:0 auto;
+        padding:16px;
+        border-top: 3px solid $warning;
+        box-shadow: 3px 5px 10px 0px rgb(0 0 0 /16%);
+        h3{
+            font-size: $fz-s;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    @include w-xl{
+        .form{
+            width: 27.50%;
+        }
+    }
+    @include w-lg{
+        .form{
+            width: 36.75%;
+        }
+    }
+    @include w-md{
+        .form{
+            width: 41.50%;
+        }
+    }
+    @include w-sm{
+        .form{
+            width: 80%;
+        }
+    }
+    form label,
+        form input{
+            width: 100%;
+        }
+        form input{
+            padding:8px 32px;
+            border:1px solid #ccc;
+        }
+        .input-group{
+            margin:5px 0;
+            position: relative;
+            i{
+                position: absolute;
+                top:8px;
+                left:8px;
+            }
+        }
+        .text-href{
+            display: block;
+            margin:0 0 36px 0;
+            color:$warning;
+        }
+        .button a{
+            display: inline-block;
+            color:white;
+            text-align: center;
+            width: 48%;
+            padding:6px 0;
+            border:none;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                background:rgba(0,0,0,0.55);
+            }
+        }
+}
+.register{
+    background: $warning;
+}
+.login{
+    background: rgb(0,0,0,0.35);
+}
+
+.register-content{
+    display: none;
+    color:$primary;
+    margin:0 0 16px 0;
+    h2{
+        font-size: $fz-xxl;
+        text-align: center;
+        font-weight: bold;
+        margin:0 0 30px 0;
+        span{
+            display: block;
+            font-size: $fz-m;
+        }
+    }
+    .form{
+        width: 38%;
+        margin:0 auto;
+        padding:16px;
+        border-top: 3px solid $warning;
+        box-shadow: 3px 5px 10px 0px rgb(0 0 0 /16%);
+        h3{
+            font-size: $fz-s;
+            text-align: center;
+            font-weight: bold;
+        }
+        &-content{
+            display: flex;
+            justify-content: space-around;
+            p,
+            form{
+                margin:16px 0 0 0;
+                width: 45%;
+            }
+        }
+        @include w-sm{
+            &-content{
+                flex-direction: column;
+                p,
+                form{
+                width: 100%;
+                }
+            }
+        }
+        .text-href{
+            display: block;
+            margin:0 0 36px 0;
+            color:$warning;
+        }
+    }
+    @include w-xl{
+        .form{
+            width: 48%;
+        }
+    }
+    @include w-lg{
+        .form{
+            width: 64%;
+        }
+    }
+    @include w-md{
+        .form{
+            width: 84%;
+        }
+    }
+    form label,
+    form input{
+        width: 100%;
+        }
+    form input{
+        padding:8px 32px;
+        border:1px solid #ccc;
+        }
+    .input-group{
+        margin:5px 0;
+        position: relative;
+            i{
+                position: absolute;
+                top:8px;
+                left:8px;
+            }
+        }
+    .input-check{
+        margin:5px 0;
+        position: relative;
+            i{
+                position: absolute;
+                top:8px;
+                left:8px;
+            }
+        }
+        .button a{
+            display: block;
+            margin:0 0 0 auto;
+            color:white;
+            text-align: center;
+            width: 48%;
+            padding:6px 0;
+            border:none;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                background:rgba(0,0,0,0.55);
+            }
+        }
+}
+.register-submit{
+    background: $warning;
+}

@@ -1,0 +1,30 @@
+@mixin replace-text{
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@mixin w-xl {
+    @media(max-width:1200px) and (min-width: 1025px){
+        @content;
+    }
+}
+@mixin w-lg{
+    @media(max-width:1024px){
+        @content;
+    }
+}
+@mixin w-md {
+    @media(max-width:768px){
+        @content;
+    }
+}
+@mixin w-md-sm {
+    @media(max-width:767px) and (min-width:577px) {
+        @content;
+    }
+}
+@mixin w-sm {
+    @media(max-width:576px){
+        @content;
+    }
+}

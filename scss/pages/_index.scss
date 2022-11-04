@@ -1,0 +1,286 @@
+.features{
+    color:$primary;
+    margin:0 0 50px 0;
+    h3{
+        font-size: $fz-m;
+        text-align: center;
+        position: relative;
+        line-height: 1.6;
+        margin:0 0 30px 0;
+        &::before{
+            content:'';
+            position: absolute;
+            border:1px solid #979797;
+            width: 110px;
+            height: 1px;
+            top:50%;
+            left:25%;
+            transform: translateY(-50%);
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            border:1px solid #979797;
+            width: 110px;
+            height: 1px;
+            top:50%;
+            right:25%;
+            transform: translateY(-50%);
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        li{
+            width: 26%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            border-radius: 50%;
+            margin:0 0 20px 0;
+        }
+        h4{
+            color:$primary;
+            font-size:$fz-l;
+            margin:0 0 10px 0;
+        }
+    }
+    @include w-md-sm{
+        ul{
+            overflow-x:auto;
+            justify-content: space-between;
+            li{
+                width: 300px;
+                margin:0 10px;
+            }
+            p{
+                width: 300px;
+            }
+        }
+    }
+    @include w-md{
+        h3::before{
+            left:12%;
+        }
+        h3::after{
+            right:12%;
+        }
+    }
+    @include w-sm{
+        h3::before,
+        h3::after{
+            display: none;
+        }
+        ul{
+            flex-direction: column;
+            align-items: center;
+            li{
+                width: 100%;
+                margin:0 0 30px;
+            }
+        }
+    }
+}
+.chef{
+    background:$primary;
+    color:$secondary;
+    margin:0 0 50px 0;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0px 12px;
+    }
+    &-info{
+        width: 41%;
+        padding: 0 0 0 20px;
+        h3{
+            font-size: $fz-l;
+            margin:0 0 16px 0;
+            line-height: 1;
+            span{
+                font-size:16px;
+                margin:0 0 16px 0;
+            }
+        }
+    }
+    @include w-md{
+        .container{
+            align-items: stretch;
+            img{
+                width: 50%;
+                object-fit: cover;
+            }
+        }
+        &-info{
+            padding:24px;
+            width: 100%;
+        }
+    }
+    @include w-md-sm{
+        .container{
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 70%;
+            }
+        }
+        &-info{
+            width: 75%;
+        }
+    }
+    @include w-sm{
+        .container{
+            flex-direction: column;
+            padding:0;
+            max-width: 100%;
+            img{
+                min-width: 100vw;
+            }
+        }
+    }
+}
+.feedback{
+    color:$primary;
+    margin:0 0 50px 0;
+    h3{
+        font-size: $fz-l;
+        margin:0 0 32px 0;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        li{
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+        }
+        img{
+            border-radius: 50%;
+        }
+    }
+    &-content{
+        margin:0 0 0 12px;
+        h4{
+            font-size: $fz-s;
+            padding:22px 0;
+        }
+        span{
+            display: block;
+            text-align: right;
+            color:rgba(61, 17, 0, 0.75);
+        }
+    }
+    @include w-md-sm{
+        ul{
+            overflow-x: auto;
+            justify-content: start;
+            margin:0 10px;
+            li{
+                width: 45%
+            }
+        }
+        &-content{
+            width: 260px;
+        }
+    }
+    @include w-sm{
+        ul{
+            flex-direction: column;
+            li{
+                width: 100%;
+                margin:0 0 30px 0;
+            }
+        }
+    }
+}
+.reserve{
+    color:$primary;
+    background:rgba(250, 250, 250, 0.7);
+    padding:50px 0;
+    h3{
+        font-size: $fz-l;
+        margin:0 0 38px 0;
+        text-align: center;
+    }
+    &-content{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 44%;
+            object-fit: cover;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 44%;
+            margin:0 0 0 20px;
+            }
+            label{
+                margin:0 0 10px 0;
+            }
+            input{
+                padding:5px 14px;
+                margin:0 0 12px 0;
+                border:1px solid #ccc;
+            }
+            .radio{
+                margin:0 0 30px 0;
+                input:nth-child(2){
+                    margin:0 36px 0 0;
+                }
+            }
+            .button{
+                align-self: flex-end;
+                button{
+                    color:#fff;
+                    padding:10px 20px;
+                    border:0px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    background:rgba(0,0,0,0.35);
+                    &:hover{
+                        background:rgba(0,0,0,0.55);
+                    }
+                }
+                .bth-orange{
+                    background:$warning;
+                }
+        }
+    }
+    @include w-md{
+        img{
+            width: 50%;
+        }
+    }
+    @include w-md-sm{
+        &-content{
+            flex-direction: column;
+            align-items: center;
+        }
+        img,
+        form{
+            width: 75%;
+        }
+        form{
+            margin:20px 0 0 0;
+        }
+    }
+    @include w-sm{
+        &-content{
+            flex-direction: column;
+            img,
+            form{
+                width: 100%;
+            }
+            form{
+                margin:30px 0 0;
+            }
+        }
+    }
+}
