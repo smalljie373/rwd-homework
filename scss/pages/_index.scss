@@ -54,11 +54,9 @@
             overflow-x:auto;
             justify-content: space-between;
             li{
-                width: 300px;
+                width: 43%;
                 margin:0 10px;
-            }
-            p{
-                width: 300px;
+                flex-shrink: 0;
             }
         }
     }
@@ -182,11 +180,9 @@
             justify-content: start;
             margin:0 10px;
             li{
-                width: 45%
+                width: 45%;
+                flex-shrink: 0;
             }
-        }
-        &-content{
-            width: 260px;
         }
     }
     @include w-sm{
