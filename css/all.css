@@ -376,11 +376,9 @@ body {
     justify-content: space-between;
   }
   .features ul li {
-    width: 300px;
+    width: 43%;
     margin: 0 10px;
-  }
-  .features ul p {
-    width: 300px;
+    flex-shrink: 0;
   }
 }
 @media (max-width: 768px) {
@@ -508,9 +506,7 @@ body {
   }
   .feedback ul li {
     width: 45%;
-  }
-  .feedback-content {
-    width: 260px;
+    flex-shrink: 0;
   }
 }
 @media (max-width: 576px) {
@@ -671,11 +667,9 @@ body {
 .products-toolbar .search {
   width: 68%;
   display: flex;
-  align-items: center;
 }
 .products-toolbar .search input {
   width: 88%;
-  height: 32px;
   border: 1px solid #3d1101;
 }
 .products-toolbar .search a {
@@ -686,7 +680,6 @@ body {
 }
 .products-toolbar .cart {
   display: flex;
-  align-items: center;
 }
 .products-toolbar .cart a {
   font-size: 20px;
