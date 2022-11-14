@@ -51,10 +51,8 @@
     .search{
         width: 68%;
         display: flex;
-        align-items: center;
         input{
             width: 88%;
-            height: 32px;
             border:1px solid $primary;
         }
         a{
@@ -66,7 +64,6 @@
     }
     .cart{
         display: flex;
-        align-items: center;
         a{
             font-size: $fz-m;
             color:$primary;
